@@ -1,0 +1,73 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# paintR
+
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/nathansam/paintR/workflows/R-CMD-check/badge.svg)](https://github.com/nathansam/paintR/actions)
+<!-- badges: end -->
+
+paintR provides a collection of R colour palettes I frequently like to use in my
+work. 
+
+## Installation
+
+You can install the development version of paintR from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("nathansam/paintR")
+```
+
+## Getting started
+
+```{R}
+library(paintR)
+```
+
+At present, paintR only supports discrete colour palettes. These palettes are
+provided via the `paintR_cols()` function with the name of the palette passed as
+an argument.
+
+```{R}
+paintR_cols("union")
+```
+
+## Palettes
+
+This section presents a list of the palettes provided by paintR alongside short
+descriptions.
+
+### Union
+
+Inspired by red white and blue flags but does not use exact hex values
+from any flag in particular. This colour palette looks great against a
+white background such as when `ggplot2::theme_minimal()` is used. However,
+this palette only consists of two colours and is therefore limited to binary
+cases. 
+
+```{R, echo = FALSE}
+library(scales)
+show_col(paintR_cols("union"),  labels = FALSE)
+```
+
+### Pastel
+
+A palette of 5 pastel colours. 
+
+```{R, echo = FALSE}
+library(scales)
+show_col(paintR_cols("pastel"),  labels = FALSE)
+```
