@@ -13,61 +13,132 @@ knitr::opts_chunk$set(
 )
 ```
 
-# paintR
+# gameR <img src="man/figures/sticker.png" align="right" width="150"/>
 
 <!-- badges: start -->
-[![R-CMD-check](https://github.com/nathansam/paintR/workflows/R-CMD-check/badge.svg)](https://github.com/nathansam/paintR/actions)
+[![R-CMD-check](https://github.com/nathansam/paintR/workflows/R-CMD-check/badge.svg)](https://github.com/nathansam/gameR/actions)
 <!-- badges: end -->
 
-paintR provides a collection of R colour palettes I frequently like to use in my
-work. 
+gameR provides a collection of R colour palettes inspired by video games. Note:
+these colour palettes may not be robust to colour blindness. 
 
 ## Installation
 
-You can install the development version of paintR from [GitHub](https://github.com/) with:
+You can install the development version of gameR from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("nathansam/paintR")
+remotes::install_github("nathansam/gameR")
 ```
 
 ## Getting started
 
 ```{R}
-library(paintR)
+library(gameR)
+library(scales)
 ```
 
 At present, paintR only supports discrete colour palettes. These palettes are
 provided via the `paintR_cols()` function with the name of the palette passed as
-an argument.
+an argument. For a full list of the palettes provided by `gameR`, call
+`gameR_cols()` without any arguments. 
 
 ```{R}
-paintR_cols("union")
+gameR_cols()
 ```
 
 ## Palettes
 
-This section presents a list of the palettes provided by paintR alongside short
-descriptions.
+This section presents a list of the palettes provided by gameR via the name
+of the game which has inspired the palette.
 
-### Union
+### Cuphead
 
-Inspired by red white and blue flags but does not use exact hex values
-from any flag in particular. This colour palette looks great against a
-white background such as when `ggplot2::theme_minimal()` is used. However,
-this palette only consists of two colours and is therefore limited to binary
-cases. 
-
-```{R, echo = FALSE}
-library(scales)
-show_col(paintR_cols("union"),  labels = FALSE)
+``` r
+gameR_cols("cups")
 ```
 
-### Pastel
+```{R, echo = FALSE}
+show_col(gameR_cols("cups"),  labels = FALSE)
+```
 
-A palette of 5 pastel colours. 
+### Cyberpunk
+
+``` r
+gameR_cols("cyberpunk")
+```
 
 ```{R, echo = FALSE}
-library(scales)
-show_col(paintR_cols("pastel"),  labels = FALSE)
+show_col(gameR_cols("cyberpunk"),  labels = FALSE)
+```
+
+### Fallout
+
+``` r
+gameR_cols("fallout")
+```
+
+
+```{R, echo = FALSE}
+show_col(gameR_cols("fallout"),  labels = FALSE)
+```
+
+### Gris
+
+``` r
+gameR_cols("gris")
+```
+
+```{R, echo = FALSE}
+show_col(gameR_cols("gris"),  labels = FALSE)
+```
+
+### Rayman
+
+``` r
+gameR_cols("rayman")
+```
+
+```{R, echo = FALSE}
+show_col(gameR_cols("rayman"),  labels = FALSE)
+```
+
+### Spiritfarer
+
+``` r
+gameR_cols("spirit")
+```
+
+```{R, echo = FALSE}
+show_col(gameR_cols("spirit"),  labels = FALSE)
+```
+
+### Splatoon
+
+``` r
+gameR_cols("splat")
+```
+
+```{R, echo = FALSE}
+show_col(gameR_cols("splat"),  labels = FALSE)
+```
+
+### Super Mario Bros
+
+``` r
+gameR_cols("superbros")
+```
+
+```{R, echo = FALSE}
+show_col(gameR_cols("superbros"),  labels = FALSE)
+```
+
+### World of Warcraft
+
+``` r
+gameR_cols("wow")
+```
+
+```{R, echo = FALSE}
+show_col(gameR_cols("wow"),  labels = FALSE)
 ```
